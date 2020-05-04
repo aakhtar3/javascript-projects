@@ -1,0 +1,18 @@
+nav {
+    background-color: #000000;
+}
+.modal {
+    background-color: #111a33;
+}
+
+.modal .modal-footer{
+    background-color: #111a33 ;
+}
+
+.green-highlight {
+    color: #03ff03;
+}
+
+.red-highlight {
+    color: #ff0303;
+}

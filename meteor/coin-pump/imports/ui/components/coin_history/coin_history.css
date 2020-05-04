@@ -1,0 +1,16 @@
+.green-highlight {
+    color: #03ff03;
+}
+
+.red-highlight {
+    color: #ff0303;
+}
+
+.pagination li.active {
+    background-color: #ab3dee;
+}
+
+
+.padding {
+    padding: 1px 1px;
+}

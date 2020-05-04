@@ -1,0 +1,79 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "private": true,
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint": "node_modules/.bin/eslint --fix .",
+    "start": "nodemon app.js",
+    "test": "node_modules/.bin/_mocha --recursive"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "moment-timezone": "^0.5.26"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.14.1",
+    "mocha": "^6.0.1",
+    "nodemon": "^1.18.10",
+    "sinon": "^7.2.4",
+    "supertest": "^3.4.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "commonjs": true,
+      "es6": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 9,
+      "sourceType": "module"
+    },
+    "rules": {
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "indent": [
+        "error",
+        2
+      ],
+      "quotes": [
+        "error",
+        "backtick"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "comma-spacing": [
+        1,
+        {
+          "before": false,
+          "after": true
+        }
+      ],
+      "template-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "keyword-spacing": "error",
+      "space-infix-ops": "error"
+    },
+    "globals": {
+      "before": false,
+      "after": false,
+      "beforeEach": false,
+      "afterEach": false,
+      "describe": false,
+      "it": false
+    }
+  }
+}

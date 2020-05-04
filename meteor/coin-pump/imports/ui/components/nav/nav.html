@@ -1,0 +1,109 @@
+<template name="nav">
+    <nav>
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="right">
+                <li><a class="modal-trigger" href="#documentation-modal">Documentation</a></li>
+                <li><a class="modal-trigger" href="#donate-modal">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Modal Structure -->
+    <div id="donate-modal" class="modal">
+        <div class="modal-content center-align">
+            <h4>Donate</h4>
+            <div>
+                <span>BTC - 1AweqXC9BpYgn5t7G4fBhJZgZmsZ5PoU18</span><br>
+                <span>ETH - 0x439978234F252Cb02E0d10FD04435Bce5cD45B89</span><br>
+                <span>LTC - LP8KXfHKT9axPT4R7ASbe3qXTTZeSseEW6</span><br>
+            </div>
+        </div>
+    </div>
+
+    <div id="documentation-modal" class="modal">
+        <div class="modal-content center-align">
+            <h4>Documentation</h4>
+            <div>
+                Positive and Negative Senitment of Coin - <span>
+                    <b><span class="green-highlight">5</span>
+                    -
+                    <span class="red-highlight">1</span></b>
+                </span><br>
+                Trading Pair - <span><b>MYST/BTC</b></span><br>
+                Coin Name - <span><b>Mysterium</b></span><br>
+                USD Price - <span><b>$4.86</b></span><br>
+                Exchange - <span><b>bittrex</b></span><br>
+                Rank 24h - <span><b>22</b></span><br>
+                Vol% 24h - <span><b>0.05%</b></span><br>
+                Vol $ 24h - <span><b>$1,21,830</b></span><br>
+                Num of Trending Pairs(MYST/BTC, MYST/ETH) - <span><b># Pairs: 1</b></span><br><br>
+            </div>
+
+            <div>
+                Positive Gain - <span><b class="green-highlight">+</b></span><br>
+                Negative Loss - <span><b class="red-highlight">-</b></span><br>
+                Less than 10 min price change - <span><b>&lt;10m</b></span><br>
+                1 hour Rank and Vol % - <span><b>1hr</b></span><br>
+                24 hour Rank and Vol % - <span><b>24h</b></span><br>
+                7 day Rank and Vol % - <span><b>7d</b></span><br>
+
+                <table >
+                    <thead>
+                        <tr>
+                            <th>+/-</th>
+                            <th>&lt;10m</th>
+                            <th>1hr</th>
+                            <th>24h</th>
+                            <th>7d</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                +
+                            </td>
+                            <td class="green-highlight">
+                                1.2%
+                            </td>
+                            <td class="green-highlight">
+                                <span>15</span><br>
+                                <span>24.13%</span>
+                            </td>
+                            <td class="green-highlight">
+                                <span>15</span><br>
+                                <span>24.13%</span>
+                            </td>
+                            <td class="green-highlight">
+                                <span>15</span><br>
+                                <span>24.13%</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                -
+                            </td>
+                            <td class="red-highlight">
+                                -1.2%
+                            </td>
+                            <td class="red-highlight">
+                                <span>15</span><br>
+                                <span>-24.13%</span>
+                            </td>
+                            <td class="red-highlight">
+                                <span>15</span><br>
+                                <span>-24.13%</span>
+                            </td>
+                            <td class="red-highlight">
+                                <span>15</span><br>
+                                <span>-24.13%</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</template>

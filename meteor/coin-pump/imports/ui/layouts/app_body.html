@@ -1,0 +1,16 @@
+<template name="app_body">
+    {{> nav }}
+
+    <body class="container">
+        {{#if Template.subscriptionsReady}}
+
+            <ul class="collapsible" data-collapsible="accordion">
+                {{#each id in coin_ids.ids}}
+                    {{> card id=id}}
+                {{/each}}
+            </ul>
+        {{else}}
+            {{> loader}}
+        {{/if}}
+    </body>
+</template>

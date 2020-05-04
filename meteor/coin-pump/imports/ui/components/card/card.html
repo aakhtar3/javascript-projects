@@ -1,0 +1,12 @@
+<template name="card">
+    <li id="{{this.id}}">
+        {{#if Template.subscriptionsReady}}
+            <div class="collapsible-header coin">
+                {{> coin coin=coin_obj}}
+            </div>
+            <div class="collapsible-body">
+                {{> coin_history pair=coin_obj.pair}}
+            </div>
+        {{/if}}
+    </li>
+</template>

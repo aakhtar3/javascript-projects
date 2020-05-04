@@ -1,0 +1,92 @@
+<template name="coin">
+    <div class="row">
+
+        <div class="col s4">
+            <br>
+            <span class="title">{{coin.pair}}</span><br>
+            <span>{{coin.coin}}</span><br>
+            <span>{{formatCurrency(coin.price)}}</span><br>
+            <span>{{coin.exchange}}</span><br>
+            <span>{{coin.[#]}}</span><br>
+            <span>{{formatPercentFull(coin.[vol%])}}</span><br>
+            <span>{{formatCurrencyVol(coin.vol24h)}}</span><br>
+            <span># Pairs: {{coin.tradingPairs.length}}</span><br>
+        </div>
+
+
+        <div class="col s6">
+            <br><br>
+            <table >
+                <thead>
+                <tr>
+                    <th>+/-</th>
+                    <th>&lt;10m</th>
+                    <th>1hr</th>
+                    <th>24h</th>
+                    <th>7d</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>
+                        +
+                    </td>
+                    <td class="green-highlight">
+                        {{#if isGreaterThanZero coin}}
+                            {{formatPercentFull(coin.[<10m])}}
+                        {{/if}}
+                    </td>
+                    <td class="green-highlight">
+                        <span>{{coin.[w1h#]}}</span><br>
+                        <span>{{formatPercent(coin.w1h)}}</span>
+                    </td>
+                    <td class="green-highlight">
+                        <span>{{coin.[w24h#]}}</span><br>
+                        <span>{{formatPercent(coin.w24h)}}</span>
+                    </td>
+                    <td class="green-highlight">
+                        <span>{{coin.[w7d#]}}</span><br>
+                        <span>{{formatPercent(coin.w7d)}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        -
+                    </td>
+                    <td class="red-highlight">
+                        {{#if isLessThanZero coin}}
+                            {{formatPercentFull(coin.[<10m])}}
+                        {{/if}}
+                    </td>
+                    <td class="red-highlight">
+                        <span>{{coin.[l1h#]}}</span><br>
+                        <span>{{formatPercent(coin.l1h)}}</span>
+                    </td>
+                    <td class="red-highlight">
+                        <span>{{coin.[l24h#]}}</span><br>
+                        <span>{{formatPercent(coin.l24h)}}</span>
+                    </td>
+                    <td class="red-highlight">
+                        <span>{{coin.[l7d#]}}</span><br>
+                        <span>{{formatPercent(coin.l7d)}}</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <span class="badge {{isNewCoin coin}}">
+        <span class="green-highlight">{{coin.posScore}}</span>
+        -
+        <span class="red-highlight">{{coin.negScore}}</span>
+    </span>
+</template>
+
+
+
+
+
+

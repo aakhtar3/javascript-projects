@@ -1,0 +1,22 @@
+.green-highlight {
+    color: #03ff03;
+}
+
+.red-highlight {
+    color: #ff0303;
+}
+
+span.badge.new {
+    font-size: 1rem;
+    background-color: #000000;
+}
+
+span.badge.new:before {
+    content: "* ";
+}
+
+span.badge.new:after {
+    content: " *";
+}
+
+

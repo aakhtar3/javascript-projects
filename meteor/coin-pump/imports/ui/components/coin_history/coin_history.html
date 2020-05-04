@@ -1,0 +1,93 @@
+<template name="coin_history">
+    {{#if isReady}}
+        <table class="responsive-table">
+            <thead>
+            <tr >
+                <!--<th>Logs</th>-->
+                <th class="padding">Time</th>
+                <th class="padding">Date</th>
+                <th class="padding">Polar</th>
+                <th class="padding"># Pairs</th>
+                <th class="padding">Price</th>
+
+                <th class="padding">Vol%</th>
+                <th class="padding">Vol24h</th>
+                <th class="padding">Exch</th>
+                <th class="padding">#</th>
+                <th class="padding">Score</th>
+
+                <th class="padding">&lt;10m</th>
+
+                <th class="padding">w1hr</th>
+                <th class="padding">w24hr</th>
+                <th class="padding">w7d</th>
+                <th class="padding">l1hr</th>
+                <th class="padding">l24hr</th>
+                <th class="padding">l7d</th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+            {{#each coin in coins}}
+                <tr>
+                    <td class="padding">{{coin.time}}</td>
+                    <td class="padding">{{formatDate(coin.date)}}</td>
+                    <td class="padding">{{formatPolar(coin.polarization)}}</td>
+                    <td class="padding">{{coin.tradingPairs.length}}</td>
+                    <td class="padding">{{formatCurrency(coin.price)}}</td>
+
+                    <td class="padding">{{formatPercent(coin.[vol%])}}</td>
+                    <td class="padding">{{formatCurrencyVol(coin.vol24h)}}</td>
+                    <td class="padding">{{coin.exchange}}</td>
+                    <td class="padding">{{coin.[#]}}</td>
+                    <td class="padding">
+                        <span class="green-highlight">{{coin.posScore}}</span>
+                        -
+                        <span class="red-highlight">{{coin.negScore}}</span>
+                    </td>
+                    <td class="padding">{{formatPercent1m(coin.[<10m])}}</td>
+                    <td class="padding">
+                        <span>{{coin.[w1h#]}}</span>
+                        -
+                        <span>{{formatPercent(coin.w1h)}}</span>
+                    </td>
+                    <td class="padding">
+                        <span>{{coin.[w24h#]}}</span>
+                        -
+                        <span>{{formatPercent(coin.w24h)}}</span>
+                    </td>
+                    <td class="padding">
+                        <span>{{coin.[w7d#]}}</span>
+                        -
+                        <span>{{formatPercent(coin.w7d)}}</span>
+                    </td>
+                    <td class="padding">
+                        <span>{{coin.[l1h#]}}</span>
+                        -
+                        <span>{{formatPercent(coin.l1h)}}</span>
+                    </td>
+                    <td class="padding">
+                        <span>{{coin.[l24h#]}}</span>
+                        -
+                        <span>{{formatPercent(coin.l24h)}}</span>
+                    </td>
+                    <td class="padding">
+                        <span>{{coin.[l7d#]}}</span>
+                        -
+                        <span>{{formatPercent(coin.l7d)}}</span>
+                    </td>
+
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+        <div class="center-align">
+            {{> defaultBootstrapPaginator pagination=templatePagination limit=10 onClick=clickEvent}}
+        </div>
+    {{else}}
+        {{> loader}}
+    {{/if}}
+
+</template>
+

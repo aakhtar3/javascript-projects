@@ -12,5 +12,4 @@ A few projects that show case a few Javascript framework/libaries.
 
 ## Node
 
-- [Twitch API](https://github.com/aakhtar3/javascript-projects/tree/master/node/twitch-api) 2018
 - [Exploit](https://github.com/aakhtar3/javascript-projects/tree/master/node/exploit) 2019

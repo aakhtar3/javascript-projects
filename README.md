@@ -16,3 +16,4 @@ A few projects that show case a few Javascript framework/libaries.
 - [Exploit](https://github.com/aakhtar3/javascript-projects/tree/master/node/exploit) 2019
 - [Quiz API](https://github.com/aakhtar3/javascript-projects/tree/master/node/quiz-api) 2020
 - [Vesting CLI](https://github.com/aakhtar3/javascript-projects/tree/master/node/vesting) 2020
+- [API](https://github.com/aakhtar3/javascript-projects/tree/master/node/api) 2022

@@ -1,0 +1,55 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "repository": "",
+  "main": "app.js",
+  "scripts": {
+    "lint": "node_modules/.bin/eslint --fix ./src",
+    "start:dev": "./node_modules/nodemon/bin/nodemon.js ./app",
+    "start:prod": "node app.js",
+    "test": "jest",
+    "test-watch": "jest --watch"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.20",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": { "ecmaVersion": 8, "sourceType": "module" },
+    "env": { "node": true, "commonjs": true, "es6": true, "jest": true },
+    "rules": {
+      "linebreak-style": [ "error", "unix" ],
+      "indent": [ "error", 4 ],
+      "quotes": [ "error", "single" ],
+      "semi": [ "error", "always" ],
+      "comma-spacing": [ 1, { "before": false, "after": true } ],
+      "template-curly-spacing": [ "error", "always" ],
+      "keyword-spacing": "error",
+      "space-infix-ops": "error",
+      "eol-last": ["error", "always"]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+# Folders
+/node_modules
+/coverage
+
+# misc
+.DS_Store
+npm-debug.log*
+mydb

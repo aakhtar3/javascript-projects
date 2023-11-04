@@ -69,8 +69,6 @@ http://localhost:3000/docs
 
 ## API
 
-Due to time constraints, I choose to use node.js as the language of choice. For a more fleshed out application, I would use typescript over javascript.
-
 ### Folder Structure
 
 ```bash
